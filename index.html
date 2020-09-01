@@ -264,11 +264,14 @@
         playVid()
     }
     function cancelClick() {
-
-            pauseVid();
+        if(msgForm.style.display != 'none') {
+            closeMsgForm();
+        }
+        else {
+            freezeVid();
             mini.style.display = "block";
             full.style.display = "none";
-        
+        }        
     }
     function videoClick() {
         if(vid.paused) {
