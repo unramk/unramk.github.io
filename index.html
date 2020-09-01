@@ -211,7 +211,7 @@
 <div id="full-floater" class="floater-position floater-full">
     <img class="cancel-img" src="https://viyoubotstorage.blob.core.windows.net/viyoubot-misc-imgs/cancel.png" onclick="cancelClick()">
     <div id="full-style" class="floater-full-style">
-        <video id="floater-video" class="floater-vid-full" onclick="videoClick()" muted>
+        <video id="floater-video" class="floater-vid-full" onclick="videoClick()">
             <source src="https://viyoubotstorage.blob.core.windows.net/asset-146786da-01ee-4c9d-878c-317f3298fb15/alvaro.mp4" type="video/mp4">
         </video>
         <div class="overlay-blob blob-1-2" onclick="callPhone()">
@@ -264,14 +264,11 @@
         playVid()
     }
     function cancelClick() {
-        if(msgForm.style.display != 'none') {
-            closeMsgForm();
-        }
-        else {
+
             pauseVid();
             mini.style.display = "block";
             full.style.display = "none";
-        }
+        
     }
     function videoClick() {
         if(vid.paused) {
